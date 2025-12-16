@@ -1,0 +1,15 @@
+[project]
+name = "images_secured"
+version = "0.1.0"
+description = "SECURED Open Call PRIV-FHE-VC FHE-ML Images Inference"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "concrete-ml>=1.9.0",
+    "matplotlib>=3.9.4",
+    "medmnist>=3.0.2",
+    "numpy>=1.26.4",
+    "torch>=2.2.2",
+    "torchvision>=0.17.2",
+]
+

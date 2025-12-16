@@ -208,7 +208,6 @@ func main() {
 	fmt.Println(strings.Repeat("=", 80))
 	fmt.Println("              BENCHMARK: Beacon PIR with DoublePIR (chr17)")
 	fmt.Println(strings.Repeat("=", 80))
-
 	fmt.Printf("\nSecurity parameters: N=%d, logq=%d\n", BEACON_SEC_PARAM, BEACON_LOGQ)
 	fmt.Printf("DB size (chr17): %d positions\n", CHR17_SIZE)
 	fmt.Printf("DB type: ")
@@ -284,7 +283,6 @@ func main() {
 	serverState, offlineMsg := pirImpl.Setup(DB, serverShared, p)
 	setupTimeMs := float64(time.Since(t0).Microseconds()) / 1000.0
 	offlineKB := float64(offlineMsg.Size()*uint64(p.Logq)) / (8.0 * 1024.0)
-
 	fmt.Printf("Setup completed: %.2f ms\n", setupTimeMs)
 	fmt.Printf("Offline download: %.2f KB\n", offlineKB)
 
@@ -297,7 +295,6 @@ func main() {
 		if spec.ExpectedToFail {
 			expectedStr = " (expected to fail)"
 		}
-
 		fmt.Printf("\n[%d/%d] Querying position %d%s...\n", i+1, len(querySpecs), spec.Position, expectedStr)
 		if spec.Description != "" {
 			fmt.Printf("  Description: %s\n", spec.Description)
